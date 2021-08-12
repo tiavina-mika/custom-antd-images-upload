@@ -1,3 +1,7 @@
+/** @jsxRuntime classic /
+/* @jsx jsx */
+import { jsx } from "@emotion/react";
+
 import { useState } from "react";
 
 import { Upload as AntdUpload, message } from "antd";
@@ -18,7 +22,7 @@ const props = {
 };
 
 const classes = {
-  upload: {
+  upload: mq({
     marginTop: 90,
     marginBottom: 228,
     background: "#E7FDEF",
@@ -27,7 +31,7 @@ const classes = {
     borderRadius: 15,
     height: 281,
     width: ["90vw", false, false, false, 1201]
-  },
+  }),
   dragger: {
     background: "none",
     border: "none"
@@ -91,12 +95,6 @@ const classes = {
 
 const label =
   "Accédez à votre bibliothèque locale de photo et sélectionnez les photos que vous souhaitez utiliser.";
-
-// const getBase64 = (img, callback) => {
-//   const reader = new FileReader();
-//   reader.addEventListener("load", () => callback(reader.result));
-//   reader.readAsDataURL(img);
-// };
 
 const getBase64 = (file) => {
   return new Promise((resolve, reject) => {

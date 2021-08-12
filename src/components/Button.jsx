@@ -1,3 +1,7 @@
+/** @jsxRuntime classic /
+/* @jsx jsx */
+import { jsx } from "@emotion/react";
+
 import { Button as AntdButton } from "antd";
 import PropTypes from "prop-types";
 
