@@ -3,15 +3,15 @@ import { ThemeProvider } from "@emotion/react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 
-import Upload from "./components/Upload";
 import theme from "./styles/theme";
 import { globalStyles } from "./styles/styles";
+import Demo from "./Demo";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       {globalStyles}
-      <Upload />
+      <Demo />
     </ThemeProvider>
   );
 };
